@@ -5,37 +5,54 @@ import classnames from 'classnames';
 const brandlogoData = [
   {
     id: 1,
-    image: "icon-rails",
+    image: "devicon-react-original-wordmark colored",
   },
-  // {
-  //   id: 2,
-  //   image: "images/client-2.svg",
-  // },
-  // {
-  //   id: 3,
-  //   image: "images/client-3.svg",
-  // },
-  // {
-  //   id: 4,
-  //   image: "images/client-4.svg",
-  // },
-  // {
-  //   id: 5,
-  //   image: "images/client-5.svg",
-  // },
-  // {
-  //   id: 6,
-  //   image: "images/client-6.svg",
-  // },
-  // {
-  //   id: 7,
-  //   image: "images/client-7.svg",
-  // },
-  // {
-  //   id: 8,
-  //   image: "images/client-8.svg",
-  // },
+  {
+    id: 2,
+    image: "devicon-angularjs-plain",
+  },
+  {
+    id: 3,
+    image: "devicon-vuejs-plain colored",
+  },
+  {
+    id: 4,
+    image: "devicon-express-original colored",
+  },
+  {
+    id: 5,
+    image: "devicon-javascript-plain colored",
+  },
+  {
+    id: 6,
+    image: "devicon-postgresql-plain colored",
+  },
+  {
+    id: 7,
+    image: "devicon-python-plain colored",
+  },
+  {
+    id: 8,
+    image: "devicon-flask-original colored",
+  },
+  {
+    id: 9,
+    image: "devicon-java-plain colored",
+  },
+  {
+    id: 10,
+    image: "devicon-cucumber-plain colored",
+  },
+  {
+    id: 11,
+    image: "devicon-mongodb-plain colored",
+  },
+  {
+    id: 12,
+    image: "devicon-nodejs-plain colored",
+  }
 ];
+
 
 function Brandlogos() {
   return (
@@ -47,7 +64,7 @@ function Brandlogos() {
             <div className="col-md-3 col-6" key={brandlogo.id}>
               <div className="client-item">
                 <div className="inner">
-                  <em className={brandlogo.image} alt="client-name"></em>
+                  <i className={`${brandlogo.image}`} alt="client-name" style={{fontSize:"75px"}}></i>
                 </div>
               </div>
             </div>
