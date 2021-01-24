@@ -4,6 +4,7 @@ import Counter from "../elements/Counter";
 import Pagetitle from "../elements/Pagetitle";
 import Skill from "../elements/Skill";
 
+
 const aboutContent = {
   name: "Bolby",
   avatarImage: "/images/me.jpg",
@@ -72,7 +73,7 @@ function About() {
                 <div className="col-md-6">
                   <p>{aboutContent.content}</p>
                   <div className="mt-3">
-                    <a href="!#" className="btn btn-default">
+                    <a href="/files/AlecLivinghouseResume.pdf" className="btn btn-default" download>
                       Download CV
                     </a>
                   </div>

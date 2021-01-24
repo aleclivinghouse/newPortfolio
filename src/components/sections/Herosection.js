@@ -28,7 +28,7 @@ function Herosection(props) {
     >
       <div className="container">
         <div className="intro">
-          <img src="images/me.jpg" alt="Bolby" className="mb-4" style={{borderRadius: "50%", height: 120, width: 120  }}/>
+          <img src="images/me.jpg" className="mb-4" style={{borderRadius: "50%", height: 120, width: 120  }}/>
 
           <h1 className="mb-2 mt-0">Alec Livinghouse</h1>
           <p>
@@ -48,34 +48,6 @@ function Herosection(props) {
               <label value></label>
             </Typed>
           </p>
-
-          <ul className="social-icons light list-inline mb-0 mt-4">
-            <li className="list-inline-item">
-              <a href="!#">
-                <i className="fab fa-instagram"></i>
-              </a>
-            </li>
-            <li className="list-inline-item">
-              <a href="!#">
-                <i className="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li className="list-inline-item">
-              <a href="!#">
-                <i className="fab fa-behance"></i>
-              </a>
-            </li>
-            <li className="list-inline-item">
-              <a href="!#">
-                <i className="fab fa-dribbble"></i>
-              </a>
-            </li>
-            <li className="list-inline-item">
-              <a href="!#">
-                <i className="fab fa-pinterest-p"></i>
-              </a>
-            </li>
-          </ul>
 
           <div className="mt-4">
             <Link
