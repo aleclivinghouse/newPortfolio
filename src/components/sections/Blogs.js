@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Blog from "../elements/Blog";
 import Pagetitle from "../elements/Pagetitle";
+import { Parallax, Background } from 'react-parallax';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const allBlogs = [
   {
@@ -37,7 +40,7 @@ function Blogs() {
   return (
     <section id="blog">
       <div className="container">
-        <Pagetitle title="Latest Posts" />
+        <Pagetitle title="Projects" />
         <div className="row blog-wrapper">
           {allBlogs.map((blogItem) => (
             <div className="col-md-4" key={blogItem.id}>
@@ -47,9 +50,6 @@ function Blogs() {
         </div>
         <div className="text-center">
           <div className="spacer" data-height="30"></div>
-          <Link to="/blogs" className="btn btn-default">
-            Show all blogs
-          </Link>
         </div>
       </div>
     </section>

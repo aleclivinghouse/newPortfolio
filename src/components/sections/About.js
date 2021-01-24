@@ -27,7 +27,7 @@ const progressData = [
   },
   {
     id: 3,
-    title: "Passion",
+    title: "That Feeling When It Finally Works",
     percantage: 100,
     progressColor: "#6C6CE5",
   },
@@ -42,16 +42,16 @@ const counterData = [
   },
   {
     id: 2,
-    title: "Cup of coffee",
+    title: "Cups of coffee",
     count: 5670,
     icon: "icon-cup",
   },
   {
     id: 3,
-    title: "Long Nights",
-    count: 427,
-    icon: "icon-star",
-  }
+    title: "Hours on Stack Overflow",
+    count: 6524,
+    icon: "icon-bulb",
+  },
 ];
 
 function About() {
@@ -62,7 +62,7 @@ function About() {
         <div className="row">
           <div className="col-md-3">
             <div className="text-center text-md-left">
-              <img src={aboutContent.avatarImage} alt={aboutContent.name} />
+              <img src={aboutContent.avatarImage} />
             </div>
             <div className="spacer d-md-none d-lg-none" data-height="30"></div>
           </div>

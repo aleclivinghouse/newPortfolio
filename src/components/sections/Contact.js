@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import Pagetitle from "../elements/Pagetitle";
+import dotenv from 'dotenv';
+import ReCAPTCHA from "react-google-recaptcha";
+dotenv.config();
 
 function Contact() {
   const [formdata, setFormdata] = useState({
@@ -12,9 +15,14 @@ function Contact() {
 
   const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
+  const [recaptcha, setRecaptcha] = useState(false);
+  const recaptchaRef = React.createRef();
+
 
   const submitHandler = (event) => {
+  if(recaptcha === true){
     event.preventDefault();
+    console.log("this is the formdata ", formdata);
     if (!formdata.name) {
       setError(true);
       setMessage("Name is required");
@@ -31,6 +39,10 @@ function Contact() {
       setError(false);
       setMessage("You message has been sent!!!");
     }
+  } else {
+    setError(false);
+    setMessage("Check the recaptcha box");
+  }
   };
 
   const handleChange = (event) => {
@@ -39,6 +51,13 @@ function Contact() {
       [event.currentTarget.name]: event.currentTarget.value,
     });
   };
+
+  const  verifyCaptcha = (res) => {
+    if(res) {
+      setRecaptcha(true);
+    }
+  }
+
 
   const handleAlerts = () => {
     if (error && message) {
@@ -78,7 +97,6 @@ function Contact() {
             <form
               id="contact-form"
               className="contact-form mt-6"
-              onSubmit={submitHandler}
             >
               <div className="row">
                 <div className="column col-md-6">
@@ -137,16 +155,22 @@ function Contact() {
                   </div>
                 </div>
               </div>
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                onChange={verifyCaptcha}
+                sitekey={process.env.REACT_APP_LOCALHOST_RECAPTCHA_SITE_KEY}
+                />
+            </form>
               <button
                 type="submit"
                 name="submit"
                 id="submit"
                 value="Submit"
                 className="btn btn-default"
+                onClick={submitHandler}
               >
                 Send Message
               </button>
-            </form>
             {handleAlerts()}
           </div>
         </div>
