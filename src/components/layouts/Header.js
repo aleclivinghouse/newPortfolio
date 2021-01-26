@@ -25,7 +25,7 @@ function Header({ light, logoSource, toggleMenu, headerToggler }) {
     return classes;
   };
   return (
-    <>
+    <div>
       <header className={handleMobileClasses()}>
         <div className="container">
           <div className="menu-icon d-inline-flex mr-4">
@@ -96,7 +96,7 @@ function Header({ light, logoSource, toggleMenu, headerToggler }) {
           </ul>
         </nav>
       </header>
-    </>
+    </div>
   );
 }
 

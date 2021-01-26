@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactCursorPosition from "react-cursor-position";
 import { Element } from "react-scroll";
 import Header from "../components/layouts/Header";
+import Nav from "../components/layouts/Nav";
 import About from "../components/sections/About";
 import Blogs from "../components/sections/Blogs";
 import Brandlogos from "../components/sections/Brandlogos";
@@ -64,3 +65,10 @@ function Homepage() {
 }
 
 export default Homepage;
+
+
+/*
+
+
+
+*/
