@@ -23,9 +23,9 @@ const experienceData = [
   {
     id: 1,
     title: "CMS Developer",
-    years: "2019 - Present",
+    years: "2020 - Present",
     content:
-      "Part of a team that utilized Adobe Experience Manager to help build Genesis.com",
+      "Part of a team at InnoceanUSA that utilized Adobe Experience Manager to help build Genesis.com",
   },
   {
     id: 2,
